@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Databinding</string>
+    <string name="bt_name_1">Change Fruit Name</string>
+    <string name="bt_name_2">Display EditText</string>
+    <string name="bt_name_3">Some Random</string>
+    <string name="edit_text_hint">Fruit will be display here ..</string>
+    <string name="cnt_EditText">Content Of EditText</string>
+</resources>

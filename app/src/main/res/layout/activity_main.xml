@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModle"
+            type="com.example.databinding.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/firstTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModle.currentRandomFruitName}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/newButton"
+            android:onClick="@{() -> viewModle.onChangeRandomFruitClick()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_name_1" />
+
+        <EditText
+            android:id="@+id/edit_Text"
+            android:text="@={viewModle.editTextContent}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_text_hint" />
+
+        <Button
+            android:id="@+id/button"
+            android:onClick="@{()-> viewModle.onDisplayEditTextContentClick()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_name_2" />
+
+        <TextView
+            android:id="@+id/contentEditText"
+            android:text="@{viewModle.displayedEditTextContent}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cnt_EditText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button3"
+            android:onClick="@{()-> viewModle.onSelectRandomEditTextFruit()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_name_3" />
+    </LinearLayout>
+
+
+</layout>
+
